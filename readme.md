@@ -17,7 +17,7 @@ While Android App Development in Java may not necessarily be the best choice, it
 
 ### Windows
 
-1) Download the latest version of android studio --> https://developer.android.com/studio?hl=fr (be sure to download the .exe)
+1) Download the latest version of android studio &#8594; https://developer.android.com/studio?hl=fr (be sure to download the .exe)
 2) Double Click to launch it
 3) Follow the setup wizard and install any SDK (Software Development Kit) packages it recommends. 
 
@@ -25,7 +25,7 @@ For more details: https://developer.android.com/studio/install?hl=fr#windows
 
 ### Mac
 
-1. Download the latest version of android studio --> https://developer.android.com/studio?hl=fr (be sure to download the .dmg)
+1. Download the latest version of android studio &#8594; https://developer.android.com/studio?hl=fr (be sure to download the .dmg)
 2. Launch the Android Studio DMG file
 3. Drag and drop Android Studio into the Applications folder, then launch Android Studio.
 4. Select whether you want to import previous Android Studio settings, then click **OK**. (**You should pick no if you have never installed Android Studio before**)
@@ -37,7 +37,7 @@ For more details: https://developer.android.com/studio/install?hl=fr#mac
 
 If you use Linux, or any Unix-like system, you should be able to figure it out on your own. 
 
-The link to the Linux installation guide is here --> https://developer.android.com/studio/install?hl=fr#linux
+The link to the Linux installation guide is here &#8594; https://developer.android.com/studio/install?hl=fr#linux
 
 ## Introduction to Android App Development
 
@@ -45,38 +45,45 @@ Android is a mobile system maintained by Google. Android provides libraries for 
 
 ### Project Structure
 
-* **AndroidManifest.xml**
+#### Important files
+
+* `AndroidManifest.xml`
   * Overall Project configuration and settings
+* `build.gradle`
+  * Main build config file
+  * Gradle is a build and compile management system
+
+#### Important directories
 * **`src/java/...`**
   * Source code for your Java classes
-* **`res/...`** --> Resource Files (mostly XML files)
-  * `drawable/` --> Images
-  * `layout/` --> Descriptions of GUI layout
-  * `menu/` --> Overall app menu options
-  * `values/` --> Constant Values and Arrays
-  * `strings` --> Localization Data
-  * `styles` --> General Appearance Styling
-* **Gradle**
-  * A build and compile management system
-  * `build.gradle` --> Main build config file
+* **`res/...`** &#8594; Resource Files (mostly XML files)
+  * `drawable/` &#8594; Images
+  * `layout/` &#8594; Descriptions of GUI layout
+  * `menu/` &#8594; Overall app menu options
+  * `values/` &#8594; Constant Values and Arrays
+  * `strings` &#8594; Localization Data
+  * `styles` &#8594; General Appearance Styling
 
 ### Android Terminology
 
-* **Activity**: A single screen of UI that appears in your app
-  * Fundamental unit of GUI in Android Applications
-* **View**: Items that appear onscreen in an activity
-  * **widget**: GUI control such as buttons or text fields
-  * **layout**: invisible container that **manages positions/sizes of widgets** 
-* **Event**: Action that occurs when a user interacts with widgets
-  * I.e, Clicking, Typing, Scrolling
-* **Action Bar**: Menu of common actions at the top of the application
-* **Notification Area**: Topmost system menu and icons
+
+
+| Term | Definition |
+| -------- | -------- | 
+| Activity | A single screen of UI that appears in your app. Fundamental unit of GUI in Android Applications. | 
+| View | Items that appear onscreen in an activity | 
+| Widget | GUI control such as buttons or text fields | 
+| Layout | Invisible container that manages positions/sizes of widgets | 
+| Event | Action that occurs when a user interacts with widgets | 
+| Action Bar | Meny of common action at the top of the application | 
+| Notification Area | Topmost system menu and icons |
 
 ## Creating an Application
 
 For this section, please ensure you currently have android studio opened and you are at the front page. 
 
-<img src="images\image-20211114010034442.png" alt="image-20211114010034442" style="zoom:50%;" />
+![](https://i.imgur.com/GHP55Ap.png)
+
 
 It should look something like the above. 
 
@@ -88,9 +95,10 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 2. Click on SDK Manager
 
-   <img src="images\image-20211114011422245.png" alt="image-20211114011422245" style="zoom:50%;" />
+![](https://i.imgur.com/58ohwzs.png)
 
-3. Ensure that Android 12 (API level 31) is clicked. (If it is already clicked, skip to the next section). 
+
+3. Ensure that Android 12 (API level 31) is clicked. (If it is already clicked, skip to the next section).
 
 4. If you have just clicked the checkbox for Android 12, Click `Apply`, then click `Ok`. Wait for it to finish downloading and installing. After that, Click `Finish`, and you can close this window to return back to the main screen. 
 
@@ -100,7 +108,8 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 2. Select Empty Activity
 
-   <img src="images\image-20211114010134857.png" alt="image-20211114010134857" style="zoom:50%;" />
+![](https://i.imgur.com/GPwmSGd.png)
+
 
 3. Click Next
 
@@ -114,7 +123,8 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
    It should look like the picture below. 
 
-   <img src="images\image-20211114010604586.png" alt="image-20211114010604586" style="zoom:50%;" />
+![](https://i.imgur.com/kbbGMVD.png)
+
 
 5. Click Finish
 
@@ -122,7 +132,8 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 7. You should be greeted by the following screen **(or something similar)**
 
-<img src="images\image-20211114011150664.png" alt="image-20211114011150664" style="zoom:50%;" />
+![](https://i.imgur.com/xXDxHtq.png)
+
 
 ### Designing a User Interface 
 
@@ -132,9 +143,10 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 We will be adding **3 buttons and 1 TextView Widget**. You should end up with something similar to this. 
 
-![image-20211208160827253](images\image-20211208160827253.png)
+![](https://i.imgur.com/1HJXcop.png)
 
-Note, your button Number and textView Number may be different, but it should be fine. textView is intentionally left blank for our application. 
+
+Note, your `button` Number and `textView` Number may be different, but it should be fine. `textView` is intentionally left blank for our application. 
 
 If you encounter any errors regarding constraints, use the GUI to set the constraints of the widgets. This can be found at the top of the properties panel under Layout. 
 
@@ -142,7 +154,8 @@ If you encounter any errors regarding constraints, use the GUI to set the constr
 
 What is an event? An event is simply an external stimulus your program can respond to. Common events include mouse motion, tapping, keys pressed etc. In most graphical programs, event-driven programming is used. This means the execution of your program is largely dictated by user events. 
 
-![image-20211114013207260](images\image-20211114013207260.png)
+![](https://i.imgur.com/ZRDElqm.png)
+
 
 As such, to respond to events in a program, we need to:
 
@@ -157,15 +170,14 @@ First, let's set an event listener for our buttons.
 2) scroll down its properties until you find **onClick**
 3) type the name of the method you'll want to handle that click
 
-![image-20211208161230007](images\image-20211208161230007.png)
+![](https://i.imgur.com/HpeuftQ.png)
+
 
 For now, we will assign the follow method names to each button
 
-```
-ADD: buttonAdd_click
-MINUS: buttonMinus_click
-CLEAR: buttonClear_click
-```
+**ADD**: `buttonAdd_click`  
+**MINUS**: `buttonMinus_click`  
+**CLEAR**: `buttonClear_click`  
 
 In addition, TextView should have **gravity** set to `center`, and all buttons should have **clickable** set to `true` (ticked). Your XML should look something like this:
 
@@ -276,7 +288,7 @@ Now how do we interact with widgets?
 
 1. In Design view, we give that view a unique ID property value (this should be done by default)
 
-2. In Java code, we call `findViewById` to access its View Object. For example, 
+2. In Java code, we call `findViewById()` to access its View Object. For example, 
 
    ```java
    public void button_onClick(View view){
@@ -284,13 +296,13 @@ Now how do we interact with widgets?
    	tv.setText("You clicked it!")
    }
    ```
-
+   
 ### Programming our App
 
 Going back to our application, we want to program a clicker application. As such, we will need to, 
 
-1) Declare a Variable to hold the number of clicks
-2) Update this Variable every time a button is clicked
+1) Declare a variable to hold the number of clicks
+2) Update this variable every time a button is clicked
 3) Update the TextView of the application every time the button is clicked
 
 Your code should end up looking something like this
@@ -335,7 +347,8 @@ public class MainActivity extends AppCompatActivity {
 
 A "Toast" is a pop-up message that appears for a short time. Toasts are useful for displaying short updates in response to events. 
 
-![image-20211208163412794](images\image-20211208163412794.png)
+![](https://i.imgur.com/XKonafI.png)
+
 
 The syntax is as follows
 
@@ -357,30 +370,183 @@ public void buttonClear_click(View view) {
 
 With the code complete, we are now ready to run our application. To do this, we will install an Android Virtual Device to run our application. Your screen should look something like this
 
-![image-20211208164122370](images\image-20211208164122370.png)
+![](https://i.imgur.com/5dum7eJ.png)
+
 
 1. Click on No Devices, then click on AVD Manager
 
 2. Click Create Virtual Device
 
-   ![image-20211208164216318](images\image-20211208164216318.png)
+![](https://i.imgur.com/Xlxcb6z.png)
+
 
 3. Choose Pixel 5, Click Next, Select Android 11 (Release name R), Click Next, and Click Finish
 
 4. Close the Virtual Device Screen, and click on the Run button. (The Green Play button)
 
-   ![image-20211208164352176](images\image-20211208164352176.png)
+![](https://i.imgur.com/0jLTH7z.png)
+
 
 5. Wait for the Virtual Device to load and Install your application. 
 
    
-
 Congratulations, you have just created your first application!
 
 ## Layouts
 
-reeee
+### Overview
+So how does one specify where a component appears? In Java, we make use of Layout managers. 
 
+Layout managers:
+* Decide where to position each component based on certain rules or criteria
+    * Example: placing four buttons in a 2x2 grid
+* Are flexible and general. This allows it to work better with a variety of devices
+
+In Android, layouts are described in XML. XML is a:
+* language for describing hierachical text data. 
+* uses tags that contains elements and atrributes. Note, tags can be nested
+* Some tags are opened and closed, otherss self close. 
+* is **case sensitive**
+```xml=
+<!-- This is a comment -->
+<!-- Open/Closed -->
+<element attr="value" attr="value"> ... </element> 
+
+<!-- Self Closing -->
+<element attr="value" attr="value" />
+```
+To change layouts, go to the **Text** view for your layout XML file. You can modify the opening and closing tags to the new layout type, such as LinearLayout. You can head back to the **Design** view and add widgets as you like. 
+![](https://i.imgur.com/onJtm0H.png)
+
+### Linear Layout
+A linear layout:
+* lays out widgets/views in a single line
+* has either a horizontal (default) or vertical orientation
+* items do not wrap around if they reach edge of screen
+![](https://i.imgur.com/ASIJOHI.png)
+
+#### Example of Linear Layout:
+![](https://i.imgur.com/hHBHfo1.png)
+
+### Gravity
+Gravity is the alignment direction that widgets are pulled. Gravity:
+* can either be top, bottom, left, right or center
+* can combine multiple with `|`
+* `gravity` sets all widgets, while `layout_gravity` sets an individual widget
+
+Example:
+```xml=
+<LinearLayout ...
+    android:orientation="vertical"
+    android:gravity="center|right"
+    <Button ... android:text = "Button 1" />
+    <Button ... android:text = "Button 2 Hooray" />
+    <Button ... android:text = "Button 3" />
+    <Button ... android:text = "Button 4 Very Long Text" />
+    <Button ... android:text = "Button 5" android:layout_gravity = "left" />
+</LinearLayout>
+```
+
+![](https://i.imgur.com/yB1kbdi.png)
+
+
+### Weight
+Weight defines how much space a view will consume compared to other views within a LinearLayout. A widget with weight **K** gets **K/total** of total size. 
+
+Example:
+![](https://i.imgur.com/jolzZGq.png)
+
+
+### Widget Box Model
+* **Content**: every widget or view has a size (width * height) for its content
+* **Padding**: Can artifically increase a widget's size by applying padding just outside its content
+* **Border**: A line around the edge of a widget
+* **Margin**: Seperation from neightbouring widgets on screen
+
+![](https://i.imgur.com/jgZrjlz.png)
+
+
+### Sizing Individual Widgets
+
+One can size individual widgets with width and height. The width and height of a widget can be:
+1. `wrap_content`: exactly large enough to fit the widget's content
+2. `match_parent`: as wide or tall as 100% of the screen or layout
+3.  A specific fixed width such as device pixels (`dp`), device-independent pixels (`dip`) or scaling pxels (`sp`)
+
+Example:
+```xml=
+<Button ...
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content" />
+```
+![](https://i.imgur.com/YGfU6dJ.png)
+
+
+### Padding
+
+Padding adds extra space inside widgets. One can set padding to adjust all sides (paddingTop, Bottom, Left or Right). Padding is usually set to specific values such as 10dp.
+
+Example:
+```xml=
+<LinearLayout ...
+              android:orientation = "vertical">
+    <Button ... android:text = "Button 1" android:padding = "50dp" />
+</LinearLayout>
+```
+
+![](https://i.imgur.com/LhOVOUt.png)
+
+
+### Margin
+
+Margin is the extra space outside a widget to seperate it from others. 
+* `layout_margin` adjusts all sides. Such as layout_marginTop, Bottom, Left or Right
+* Is usually set to specific values such as 10dp
+
+Example:
+```xml=
+<LinearLayout ...
+              android:orientation = "vertical">
+    <Button ... android:text = "Button 1" android:layout_margin = "50dp" />
+</LinearLayout>
+```
+![](https://i.imgur.com/MYVMxPG.png)
+
+
+
+### Grid Layout
+
+A grid layout:
+* Lays out widgets/views in lines of rows and columns
+    * orientation attribute defines row-major or column-major order
+* By default, rows and columns are equal in size
+    * each widget is placed into "next" available row/column index unless given an explicit `layout_row` and `layout_column` attribute
+
+Example:
+![](https://i.imgur.com/4sj3FLL.png)
+
+
+### Relative Layout
+
+In a relative layout, each widget position and size are relative to other views. 
+* relative to "parent" (the activity itself)
+* relative to other widgets/views
+* x-positions of reference (left, right, center)
+* y-positions of reference (top, bottom, center)
+![](https://i.imgur.com/oxZPwyz.png)
+
+Properties for x,y relative to another widget:
+* layout_below, above, toLeftOf, toRightOf
+    * set these to the ID of another widget in the format "@id/theID"
+
+Properties for x,y relative to layout container (the activity):
+* layout_alignParentTop, Bottom, Left, Right
+    * set these flags to a boolean value of "true" to enable them
+* layout_centerHorizontal, Vertical, InParent
+    * set these flags to "true" to center the control within its parent in a dimension
+
+Example:
+![](https://i.imgur.com/2Yy4CJ9.png)
 
 
 ## Updating our Application with more buttons and layouts
@@ -389,17 +555,22 @@ reeee
 
 We will now add 3 more buttons, and re-arrange them under a Table Layout. Your `activity_main.xml` should look something like this. For these new 3 buttons, their functions is **up to you**. The functions this guide will set **may be different from the one you choose to set**. 
 
-![image-20211208174125642](images\image-20211208174125642.png)
+![](https://i.imgur.com/k8N7zFy.png)
 
-Similar as before, we will have to add the **onClick** method name and set **clickable** to True. 
 
-### Making use of Strings.xml
+Similar as before, we will have to add the `onClick` method name and set _`clickable`_ to True. 
 
-At this point, you would have realised it is quite tedious and messy to name your buttons in the `activity_main.xml` file. One solution is to make use of the file `Strings.xml` to hold all our hard-coded values (like names of buttons).  To make use of this, we have to change two things. 
+### Making use of `strings.xml`
+
+At this point, you would have realised it is quite tedious and messy to name your buttons in the `activity_main.xml` file. One solution is to make use of the file `strings.xml` to hold all our hard-coded values (like names of buttons).  To make use of this, we have to change two things. 
 
 First, under `activity_main.xml`, `android:text="Some string"` to `android:text="@string/somename"`
 
-Next, edit `strings.xml`. This is found under `res/Values/strings.xml`. To add a new string, simply add a line `<string name="somename">Clicker</string>`. 
+Next, edit `strings.xml`. This is found under `res/Values/strings.xml`. To add a new string, simply add the line  
+
+```
+<string name="somename">Clicker</string>
+```  
 
 Your `activity_main.xml` should look similar to the code below. Note, we are only showing the first 3 buttons due to length restrictions. The remaining `TableRow` should be similar to the first `TableRow` with 3 buttons. Do ensure you add names and **onClick** methods. 
 
@@ -541,13 +712,113 @@ public class MainActivity extends AppCompatActivity {
 
 Be sure to save the code, and run the application to ensure it works!
 
-## Intents
-
-<ref to slides>
-
 ## Activities 
 
-<ref to slides>
+### Activity Lifecycle
+
+You might have noticed in the previous code examples that there is some code written in the `onCreate()` method. You might have also tried to rename the method/delete the method only to be met with errors. This is because of the activity lifecycle. 
+
+There are 7 states an Activity can be in. These 7 states make up the Activity Lifecycle from its creation to its destruction. 
+
+![](https://i.imgur.com/xAanH9s.png)
+
+When the activity enters a new state, a method will be called (`onCreate()` is one such method). The 7 methods are:
+
+| Method | Description |
+| ------ | ----------- |
+|`onCreate()`| Called when activity is first created. Used to set up the activity object, load resources such as images, layouts etc. |
+|`onStart()`| Called when activity is becoming visible to the user. Usually used to reopen any resources you closed in `onStop()` |
+|`onResume()`| Called when activity will start interacting with the user. May be used to initialize resources that were released in `onPause()`. |
+|`onPause()`| Called when activity is not visible to the user. May be used to stop animations or release other system resources. |
+|`onStop()`| Called when activity is no longer visible to the user. Performs heavy-duty shutdown tasks. |
+|`onRestart()`| Called after your activity is stopped, prior to start. Useful if you want to run anything only after `onStop()` but not after `onCreate()` |
+|`onDestroy()`| Called before the activity is destroyed |
+
+## Intents
+
+### Background
+Many applications have multiple activities. For example, in an address book app, the main activity can be a list of contacts, while another activity can be to view details of each contact. An activity A can launch another activity B in response to an event. Note, activities can pass data to each other. Activity A can pass data to Activity B, and Activity B can send data back to Activity A when it is done. 
+
+An intent is a bridge between activities. It serves as a way for one activity to invoke another. 
+* the activity can be in the same app or even in a different app
+* can store extra data passed as "parameters" to the other activity
+* new activity can "return" information back to the caller (original activity) if needed
+
+![](https://i.imgur.com/vLYFc0E.png)
+
+### Working with intents
+To launch another activity (usually in response to an event such as a button click), create an Intent object and call `startActivity` with it. 
+```java=
+Intent intent = new Intent(this, ActivityName.class);
+startActivity(intent);
+```
+To pass aditional parameters or data to the second activity, `putExtra` is called. Extra data is stores as key-value pairs, similar to a Map. 
+```java=
+Intent intent = new Intent(this, ActivityName.class);
+intent.putExtra("Key", value);
+startActivity(intent);
+```
+
+In the new activity that was started, you can grab extra data passed to it. `getIntent` accesses the Intent that spawned the activity. The intent has methods such as `getExtra`, `getIntExtra`, `getStringExtra` to extract additional data stored inside the intent. 
+
+For example, 
+```java=
+public class SecondActivity extends Activity {
+    ...
+    public void onCreate(Bundle savedState) {
+        super.onCreate(savedState);
+        setContentView(R.layout.activity_second)
+        //Get Intent and get extra data passed
+        Intent intent = getIntent();
+        String extra = intent.getExtra("name");
+    }
+}
+```
+
+If the calling activity wants to wait for a result from the called activity, `startActivityForResult` should be used instead of using `startActivity`. 
+`startActivityForResult`:
+* requires a unique ID number to represent the action performed
+* requires a final int constant with a value of your choice
+
+To send back a result from a called activity, 
+1) an intent has to be created to go back. 
+2) Extra data should be passed using `putExtra`. 
+3) `setResult` must be called
+4) finish by calling `onDestroy`
+
+For example, 
+```java=
+public class SecondActivity extends Activity {
+    ...
+    public void returnClick(View view){
+        Intent intent = new Intent()
+        intent.putExtra("Key", value);
+        setResult(RESULT_OK, intent);
+        finish(); //calls onDestroy
+    }
+}
+```
+
+An example is included below which creates an Intent, and gets back the result from the called activity. 
+
+```java=
+public class FirstActivity extends Activity {
+    private static final int REQ_CODE = 123; //Must be from 0 to 65535
+    
+    public void buttonClick(View view) {
+        Intent intent = getIntent(this, SecondActivity.class);
+        startActivityForResult(intent, REQ_CODE);
+    }
+    
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (requestCode == REQ_CODE) {
+            //came back from SecondActivity
+            String data = intent.getStringExtra("Key")
+        }
+    }
+}
+```
 
 ## Adding Win screen to our application
 
@@ -620,11 +891,12 @@ Now we can move on to adding our new Win Activity and Win Screen.
 
 First, let's create our new Win Screen UI. 
 
-Under `res/layout`, we will create a new `xml` file called `win.xml`. This time, we will only be adding a TextView in the centre of the screen. Do remember that TextView should have **gravity** set to `center`.
+Under `res/layout`, we will create a new `xml` file called `win.xml`. This time, we will only be adding a TextView in the center of the screen. Do remember that TextView should have **gravity** set to `center`.
 
 Your `win.xml` should look something like this. 
 
-![image-20211213123812827](images\image-20211213123812827.png)
+![](https://i.imgur.com/SJ0e7Sw.png)
+
 
 Your XML code should look something like this
 
@@ -679,7 +951,13 @@ public class WinActivity extends AppCompatActivity {
 
 Pay close attention to `onCreate()` and ensure that the `ContentView` has been set correctly to our new layout `win.xml`. Similar to our code in `main.java`, we interact with our TextView by calling `findViewById` to access it's view object. 
 
-For this new Activity to be recognised by our Android Application, we have to edit the `AndroidManifest.xml` file and add the following line `<activity android:name=".WinActivity" ></activity>`. Your `AndroidManifest.xml` should look something like this. 
+For this new Activity to be recognised by our Android Application, we have to edit the `AndroidManifest.xml` file and add the following line 
+
+```xml
+<activity android:name=".WinActivity" ></activity>
+```  
+
+Your `AndroidManifest.xml` should look something like this. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -725,7 +1003,7 @@ Remember, we can start a new instance of an Activity by passing an Intent to `st
 For this, 
 
 * We will first import `import android.content.Intent;`
-* We will create a function to check the current count. If `count ==100`, we will start our win Activity. The function should look something like this. Note, `i.putExtra` allows us to pass additional data to the new Activity in the form of a **Key-Value pair**. This means that our value press is linked to the key "press". 
+* We will create a function to check the current count. If `count == 100`, we will start our win Activity. The function should look something like this. Note, `i.putExtra` allows us to pass additional data to the new Activity in the form of a **Key-Value pair**. This means that our value press is linked to the key "press". 
 
 ```java
 private void checkCount() {
@@ -845,11 +1123,20 @@ public class WinActivity extends AppCompatActivity {
 
 ## The End
 
-GitHub Link: https://github.com/dbsqwerty/android-app-dev-tutorial
+Github Link: https://github.com/dbsqwerty/android-app-dev-tutorial
 
-Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. 
+Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. 
+
+## Credits
+* Sean Seah
+* River Koh
 
 ## References
 
 * https://developer.android.com/reference
 * https://web.stanford.edu/class/cs193a/
+
+
+
+
+
