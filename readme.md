@@ -1,7 +1,3 @@
-4) Intents https://github.com/luong-komorebi/CS193A/blob/master/lectures/intents.pdf
-6) Activity Lifecycle  https://github.com/luong-komorebi/CS193A/blob/master/lectures/activity-lifecycle.pdf
-3) https://github.com/luong-komorebi/CS193A/blob/master/lectures/state-preferences.pdf
-
 # Android App Development
 
 While Android App Development in Java may not necessarily be the best choice, it does however provide a foundation for future app development in other languages and for other platforms. By the end of this set of notes, you would have (hopefully) created an android application!
@@ -80,7 +76,7 @@ Android is a mobile system maintained by Google. Android provides libraries for 
 
 For this section, please ensure you currently have android studio opened and you are at the front page. 
 
-<img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211114010034442.png" alt="image-20211114010034442" style="zoom:50%;" />
+<img src="images\image-20211114010034442.png" alt="image-20211114010034442" style="zoom:50%;" />
 
 It should look something like the above. 
 
@@ -92,7 +88,7 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 2. Click on SDK Manager
 
-   <img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211114011422245.png" alt="image-20211114011422245" style="zoom:50%;" />
+   <img src="images\image-20211114011422245.png" alt="image-20211114011422245" style="zoom:50%;" />
 
 3. Ensure that Android 12 (API level 31) is clicked. (If it is already clicked, skip to the next section). 
 
@@ -104,7 +100,7 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 2. Select Empty Activity
 
-   <img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211114010134857.png" alt="image-20211114010134857" style="zoom:50%;" />
+   <img src="images\image-20211114010134857.png" alt="image-20211114010134857" style="zoom:50%;" />
 
 3. Click Next
 
@@ -118,7 +114,7 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
    It should look like the picture below. 
 
-   <img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211114010604586.png" alt="image-20211114010604586" style="zoom:50%;" />
+   <img src="images\image-20211114010604586.png" alt="image-20211114010604586" style="zoom:50%;" />
 
 5. Click Finish
 
@@ -126,7 +122,7 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 7. You should be greeted by the following screen **(or something similar)**
 
-<img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211114011150664.png" alt="image-20211114011150664" style="zoom:50%;" />
+<img src="images\image-20211114011150664.png" alt="image-20211114011150664" style="zoom:50%;" />
 
 ### Designing a User Interface 
 
@@ -136,7 +132,7 @@ If for some reason, it is not already installed, follow the steps below. (It sho
 
 We will be adding **3 buttons and 1 TextView Widget**. You should end up with something similar to this. 
 
-![image-20211208160827253](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208160827253.png)
+![image-20211208160827253](images\image-20211208160827253.png)
 
 Note, your button Number and textView Number may be different, but it should be fine. textView is intentionally left blank for our application. 
 
@@ -146,7 +142,7 @@ If you encounter any errors regarding constraints, use the GUI to set the constr
 
 What is an event? An event is simply an external stimulus your program can respond to. Common events include mouse motion, tapping, keys pressed etc. In most graphical programs, event-driven programming is used. This means the execution of your program is largely dictated by user events. 
 
-![image-20211114013207260](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211114013207260.png)
+![image-20211114013207260](images\image-20211114013207260.png)
 
 As such, to respond to events in a program, we need to:
 
@@ -161,7 +157,7 @@ First, let's set an event listener for our buttons.
 2) scroll down its properties until you find **onClick**
 3) type the name of the method you'll want to handle that click
 
-![image-20211208161230007](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208161230007.png)
+![image-20211208161230007](images\image-20211208161230007.png)
 
 For now, we will assign the follow method names to each button
 
@@ -339,7 +335,7 @@ public class MainActivity extends AppCompatActivity {
 
 A "Toast" is a pop-up message that appears for a short time. Toasts are useful for displaying short updates in response to events. 
 
-![image-20211208163412794](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208163412794.png)
+![image-20211208163412794](images\image-20211208163412794.png)
 
 The syntax is as follows
 
@@ -361,19 +357,19 @@ public void buttonClear_click(View view) {
 
 With the code complete, we are now ready to run our application. To do this, we will install an Android Virtual Device to run our application. Your screen should look something like this
 
-![image-20211208164122370](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208164122370.png)
+![image-20211208164122370](images\image-20211208164122370.png)
 
 1. Click on No Devices, then click on AVD Manager
 
 2. Click Create Virtual Device
 
-   ![image-20211208164216318](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208164216318.png)
+   ![image-20211208164216318](images\image-20211208164216318.png)
 
 3. Choose Pixel 5, Click Next, Select Android 11 (Release name R), Click Next, and Click Finish
 
 4. Close the Virtual Device Screen, and click on the Run button. (The Green Play button)
 
-   ![image-20211208164352176](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208164352176.png)
+   ![image-20211208164352176](images\image-20211208164352176.png)
 
 5. Wait for the Virtual Device to load and Install your application. 
 
@@ -393,7 +389,7 @@ reeee
 
 We will now add 3 more buttons, and re-arrange them under a Table Layout. Your `activity_main.xml` should look something like this. For these new 3 buttons, their functions is **up to you**. The functions this guide will set **may be different from the one you choose to set**. 
 
-![image-20211208174125642](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211208174125642.png)
+![image-20211208174125642](images\image-20211208174125642.png)
 
 Similar as before, we will have to add the **onClick** method name and set **clickable** to True. 
 
@@ -628,7 +624,7 @@ Under `res/layout`, we will create a new `xml` file called `win.xml`. This time,
 
 Your `win.xml` should look something like this. 
 
-![image-20211213123812827](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211213123812827.png)
+![image-20211213123812827](images\image-20211213123812827.png)
 
 Your XML code should look something like this
 
@@ -849,7 +845,7 @@ public class WinActivity extends AppCompatActivity {
 
 ## The End
 
-<Insert github link to final code for reference>
+GitHub Link: https://github.com/dbsqwerty/android-app-dev-tutorial
 
 Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. 
 
