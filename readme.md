@@ -714,6 +714,8 @@ Be sure to save the code, and run the application to ensure it works!
 
 ## Activities 
 
+An Acitivty can be thought of as a "screen" or a "page". Before we learn how to use activities, let's go through some theory on the Activity lifecycle.
+
 ### Activity Lifecycle
 
 You might have noticed in the previous code examples that there is some code written in the `onCreate()` method. You might have also tried to rename the method/delete the method only to be met with errors. This is because of the activity lifecycle. 
@@ -733,6 +735,15 @@ When the activity enters a new state, a method will be called (`onCreate()` is o
 |`onStop()`| Called when activity is no longer visible to the user. Performs heavy-duty shutdown tasks. |
 |`onRestart()`| Called after your activity is stopped, prior to start. Useful if you want to run anything only after `onStop()` but not after `onCreate()` |
 |`onDestroy()`| Called before the activity is destroyed |
+
+
+### Adding a new Activity
+
+To add an activity to the project, right-click "app" > New > Activity > Blank Activity. 
+
+![](https://i.imgur.com/j1LOAPE.png)
+
+This would create a `.java` class in `src/java` where we write our activity functions, and a `.xml` file in `res/layouts` where we define the graphical interface for our activity. An entry into `AndroidManifest.xml` is also entered automatically so that our app "knows" about the activity (this means if you rename your activity without updating the manifest, you might encounter an error). 
 
 ## Intents
 
@@ -1125,11 +1136,11 @@ public class WinActivity extends AppCompatActivity {
 
 Github Link: https://github.com/dbsqwerty/android-app-dev-tutorial
 
-Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. 
+Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. Some places to refer to for additional help include Stack Overflow (https://stackoverflow.com/), the offical Android Documentation (https://developer.android.com/docs) and Google. 
 
 ## Credits
-* Sean Seah
-* River Koh
+* [Sean Seah](https://dbsqwerty.github.io/)
+* [River Koh](https://oceankoh.github.io/)
 
 ## References
 
