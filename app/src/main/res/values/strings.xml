@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Clicker</string>
+    <string name="buttonClear_click">Clear</string>
+    <string name="buttonAdd_click">Add</string>
+    <string name="buttonMinus_click">Minus</string>
+    <string name="buttonDivide_click">Divide</string>
+    <string name="buttonMult_click">Mul</string>
+    <string name="buttonPow_click">Square</string>
+</resources>
