@@ -390,6 +390,7 @@ With the code complete, we are now ready to run our application. To do this, we 
 5. Wait for the Virtual Device to load and Install your application. 
 
    
+
 Congratulations, you have just created your first application!
 
 ## Layouts
@@ -570,7 +571,7 @@ Next, edit `strings.xml`. This is found under `res/Values/strings.xml`. To add a
 
 ```
 <string name="somename">Clicker</string>
-```  
+```
 
 Your `activity_main.xml` should look similar to the code below. Note, we are only showing the first 3 buttons due to length restrictions. The remaining `TableRow` should be similar to the first `TableRow` with 3 buttons. Do ensure you add names and **onClick** methods. 
 
@@ -966,7 +967,7 @@ For this new Activity to be recognised by our Android Application, we have to ed
 
 ```xml
 <activity android:name=".WinActivity" ></activity>
-```  
+```
 
 Your `AndroidManifest.xml` should look something like this. 
 
