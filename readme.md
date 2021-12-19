@@ -66,8 +66,6 @@ Android is a mobile system maintained by Google. Android provides libraries for 
 
 ### Android Terminology
 
-
-
 | Term | Definition |
 | -------- | -------- | 
 | Activity | A single screen of UI that appears in your app. Fundamental unit of GUI in Android Applications. | 
@@ -404,11 +402,11 @@ Layout managers:
 * Are flexible and general. This allows it to work better with a variety of devices
 
 In Android, layouts are described in XML. XML is a:
-* language for describing hierachical text data. 
+* language for describing hierarchical text data. 
 * uses tags that contains elements and atrributes. Note, tags can be nested
 * Some tags are opened and closed, otherss self close. 
 * is **case sensitive**
-```xml=
+```xml
 <!-- This is a comment -->
 <!-- Open/Closed -->
 <element attr="value" attr="value"> ... </element> 
@@ -426,7 +424,8 @@ A linear layout:
 * items do not wrap around if they reach edge of screen
 ![](https://i.imgur.com/ASIJOHI.png)
 
-#### Example of Linear Layout:
+Example of Linear Layout:
+
 ![](https://i.imgur.com/hHBHfo1.png)
 
 ### Gravity
@@ -436,7 +435,7 @@ Gravity is the alignment direction that widgets are pulled. Gravity:
 * `gravity` sets all widgets, while `layout_gravity` sets an individual widget
 
 Example:
-```xml=
+```xml
 <LinearLayout ...
     android:orientation="vertical"
     android:gravity="center|right"
@@ -475,7 +474,7 @@ One can size individual widgets with width and height. The width and height of a
 3.  A specific fixed width such as device pixels (`dp`), device-independent pixels (`dip`) or scaling pxels (`sp`)
 
 Example:
-```xml=
+```xml
 <Button ...
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content" />
@@ -485,10 +484,10 @@ Example:
 
 ### Padding
 
-Padding adds extra space inside widgets. One can set padding to adjust all sides (paddingTop, Bottom, Left or Right). Padding is usually set to specific values such as 10dp.
+Padding adds extra space inside widgets. One can set padding to adjust all sides (`paddingTop`, `Bottom`, `Left` or `Right`). Padding is usually set to specific values such as 10dp.
 
 Example:
-```xml=
+```xml
 <LinearLayout ...
               android:orientation = "vertical">
     <Button ... android:text = "Button 1" android:padding = "50dp" />
@@ -501,11 +500,11 @@ Example:
 ### Margin
 
 Margin is the extra space outside a widget to seperate it from others. 
-* `layout_margin` adjusts all sides. Such as layout_marginTop, Bottom, Left or Right
+* `layout_margin` adjusts all sides. Such as `layout_marginTop`, `Bottom`, `Left` or `Right`
 * Is usually set to specific values such as 10dp
 
 Example:
-```xml=
+```xml
 <LinearLayout ...
               android:orientation = "vertical">
     <Button ... android:text = "Button 1" android:layout_margin = "50dp" />
@@ -537,13 +536,13 @@ In a relative layout, each widget position and size are relative to other views.
 ![](https://i.imgur.com/oxZPwyz.png)
 
 Properties for x,y relative to another widget:
-* layout_below, above, toLeftOf, toRightOf
-    * set these to the ID of another widget in the format "@id/theID"
+* `layout_below`, `above`, `toLeftOf`, `toRightOf`
+    * set these to the ID of another widget in the format `"@id/theID"`
 
 Properties for x,y relative to layout container (the activity):
-* layout_alignParentTop, Bottom, Left, Right
+* `layout_alignParentTop`, `Bottom`, `Left`, `Right`
     * set these flags to a boolean value of "true" to enable them
-* layout_centerHorizontal, Vertical, InParent
+* `layout_centerHorizontal`, `Vertical`, `InParent`
     * set these flags to "true" to center the control within its parent in a dimension
 
 Example:
@@ -715,7 +714,7 @@ Be sure to save the code, and run the application to ensure it works!
 
 ## Activities 
 
-An Acitivty can be thought of as a "screen" or a "page". Before we learn how to use activities, let's go through some theory on the Activity lifecycle.
+An Activity can be thought of as a "screen" or a "page". Before we learn how to use activities, let's go through some theory on the Activity lifecycle.
 
 ### Activity Lifecycle
 
@@ -760,12 +759,12 @@ An intent is a bridge between activities. It serves as a way for one activity to
 
 ### Working with intents
 To launch another activity (usually in response to an event such as a button click), create an Intent object and call `startActivity` with it. 
-```java=
+```java
 Intent intent = new Intent(this, ActivityName.class);
 startActivity(intent);
 ```
-To pass aditional parameters or data to the second activity, `putExtra` is called. Extra data is stores as key-value pairs, similar to a Map. 
-```java=
+To pass additional parameters or data to the second activity, `putExtra` is called. Extra data is stores as key-value pairs, similar to a Map. 
+```java
 Intent intent = new Intent(this, ActivityName.class);
 intent.putExtra("Key", value);
 startActivity(intent);
@@ -774,7 +773,7 @@ startActivity(intent);
 In the new activity that was started, you can grab extra data passed to it. `getIntent` accesses the Intent that spawned the activity. The intent has methods such as `getExtra`, `getIntExtra`, `getStringExtra` to extract additional data stored inside the intent. 
 
 For example, 
-```java=
+```java
 public class SecondActivity extends Activity {
     ...
     public void onCreate(Bundle savedState) {
@@ -799,7 +798,7 @@ To send back a result from a called activity,
 4) finish by calling `onDestroy`
 
 For example, 
-```java=
+```java
 public class SecondActivity extends Activity {
     ...
     public void returnClick(View view){
@@ -813,7 +812,7 @@ public class SecondActivity extends Activity {
 
 An example is included below which creates an Intent, and gets back the result from the called activity. 
 
-```java=
+```java
 public class FirstActivity extends Activity {
     private static final int REQ_CODE = 123; //Must be from 0 to 65535
     
@@ -1137,7 +1136,7 @@ public class WinActivity extends AppCompatActivity {
 
 Github Link: https://github.com/dbsqwerty/android-app-dev-tutorial
 
-Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. Some places to refer to for additional help include Stack Overflow (https://stackoverflow.com/), the offical Android Documentation (https://developer.android.com/docs) and Google. 
+Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. Some places to refer to for additional help include Stack Overflow (https://stackoverflow.com/), the official Android Documentation (https://developer.android.com/docs) and Google. 
 
 ## Credits
 * [Sean Seah](https://dbsqwerty.github.io/)
