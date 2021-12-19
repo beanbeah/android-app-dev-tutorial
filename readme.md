@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Android App Development
 
 While Android App Development in Java may not necessarily be the best choice, it does however provide a foundation for future app development in other languages and for other platforms. By the end of this set of notes, you would have (hopefully) created an android application!
@@ -857,4 +858,8 @@ Congratulations, you have reached the end of this set of notes. You can refer to
 
 
 
+=======
+## Android App Dev Notes
+>>>>>>> 545b04068f11f431893475768eb45a4e983319b7
 
+An attempt to make some android app dev notes.
