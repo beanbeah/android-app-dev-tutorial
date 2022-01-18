@@ -1,3 +1,7 @@
+## Credits
+* [Sean Seah](https://dbsqwerty.github.io/)
+* [River Koh](https://oceankoh.github.io/)
+
 # Android App Development
 
 While Android App Development in Java may not necessarily be the best choice, it does however provide a foundation for future app development in other languages and for other platforms. By the end of this set of notes, you would have (hopefully) created an android application!
@@ -1137,10 +1141,6 @@ public class WinActivity extends AppCompatActivity {
 Github Link: https://github.com/dbsqwerty/android-app-dev-tutorial
 
 Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. Some places to refer to for additional help include Stack Overflow (https://stackoverflow.com/), the official Android Documentation (https://developer.android.com/docs) and Google. 
-
-## Credits
-* [Sean Seah](https://dbsqwerty.github.io/)
-* [River Koh](https://oceankoh.github.io/)
 
 ## References
 
