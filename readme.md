@@ -1,6 +1,6 @@
 ## Credits
-* [Sean Seah](https://dbsqwerty.github.io/)
-* [River Koh](https://oceankoh.github.io/)
+* [Sean Seah](https://dbsqwerty.github.io/), Class of 2023
+* [River Koh](https://oceankoh.github.io/), Class of 2020
 
 # Android App Development
 
