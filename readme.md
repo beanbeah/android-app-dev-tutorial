@@ -1,5 +1,5 @@
 ## Credits
-* [Sean Seah](https://dbsqwerty.github.io/), Class of 2023
+* [Sean Seah](https://beanbeah.github.io/), Class of 2023
 * [River Koh](https://oceankoh.github.io/), Class of 2020
 
 # Android App Development
@@ -1138,7 +1138,7 @@ public class WinActivity extends AppCompatActivity {
 
 ## The End
 
-Github Link: https://github.com/dbsqwerty/android-app-dev-tutorial
+Github Link: https://github.com/beanbeah/android-app-dev-tutorial
 
 Congratulations, you have reached the end of this set of notes. You can refer to the link above in case you missed out something, or would like to refer to the final code. We hope that this set of notes would help in your coursework, IA and your future projects. Some places to refer to for additional help include Stack Overflow (https://stackoverflow.com/), the official Android Documentation (https://developer.android.com/docs) and Google. 
 
