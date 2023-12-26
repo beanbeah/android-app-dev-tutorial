@@ -1,3 +1,6 @@
+## Notice
+This set of notes was created quite a while back, and some of the contents may have since changed. Do note that this tutorial is merely an introductory tutorial and does not fully cover android app development. 
+
 ## Credits
 * [Sean Seah](https://beanbeah.github.io/), Class of 2023
 * [River Koh](https://oceankoh.github.io/), Class of 2020
